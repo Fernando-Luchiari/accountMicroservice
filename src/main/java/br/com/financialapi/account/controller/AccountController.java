@@ -25,10 +25,10 @@ public class AccountController {
         return mapper.toResponse(account);
     }
 
-    @GetMapping("/accountId")
+    @GetMapping("/{accountId}")
     public AccountResponse getBalance(@PathVariable(value = "accountId") String accountId){
-
-
+        Account account = service.getAccountByAccountId(accountId);
+        return mapper.toResponse(account);
     }
 
 }
