@@ -3,6 +3,7 @@ package br.com.financialapi.account.controller;
 import br.com.financialapi.account.exception.AccountNotFoundException;
 import br.com.financialapi.account.model.Account;
 import br.com.financialapi.account.repository.AccountRepository;
+import br.com.financialapi.account.request.AccountRequest;
 import br.com.financialapi.account.response.AccountResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,5 +57,7 @@ public class AccountControllerTest {
         assertThat(accountResponse.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
 
     }
+
+
 
 }
